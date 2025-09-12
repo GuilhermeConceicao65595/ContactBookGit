@@ -93,4 +93,8 @@ public class ContactBook {
         return contacts[currentContact++];
     }
 
+    public boolean sameContact (){
+        Contact c = contacts[0];
+        return true;
+    }
 }
