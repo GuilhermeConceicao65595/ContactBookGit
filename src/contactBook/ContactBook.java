@@ -97,13 +97,13 @@ public class ContactBook {
         if(contacts.length == 0){
             return true;
         }else {
-            for (int i = 0; i < contacts.length - 1; i++){
+            for (int i = 0; i < counter-1; i++){
                 Contact c = contacts[i];
-            for (int j = i+1; j<contacts.length; j++) {
-                if (c.getPhone() == contacts[i].getPhone()) {
-                    return true;
+                for (int j = i+1; j < counter; j++) {
+                    if (c.getPhone() == contacts[j].getPhone()) {
+                        return true;
+                    }
                 }
-            }
             }
         }
         return false;
