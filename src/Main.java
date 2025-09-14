@@ -162,7 +162,11 @@ public class Main {
     private static void getNumber(Scanner in, ContactBook cBook) {
         int phone;
         phone = in.nextInt(); in.nextLine();
-
+        String resultName = cBook.searchContact(phone);
+        if (resultName == null)
+            System.out.println(PHONE_NOT_EXIST);
+        else
+            System.out.println(resultName);
     }
 
     private static void equalPhones(ContactBook cBook) {

@@ -108,4 +108,21 @@ public class ContactBook {
         }
         return false;
     }
+
+    public String searchContact(int phone) {
+        int i = 0;
+        String contactName = null;
+        boolean found = false;
+
+        while (i < counter && !found) {
+            if (contacts[i].getPhone() == phone) {
+                found = true;
+                contactName = contacts[i].getName();
+            } else {
+                i++;
+            }
+        }
+
+        return contactName;
+    }
 }
